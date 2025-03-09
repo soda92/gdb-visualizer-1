@@ -1,0 +1,5 @@
+target create ".\\build\\gdbviz1.exe"
+breakpoint set --file viz.cpp --line 33
+command script import lldbpath1.py
+breakpoint command add 1 --python-function lldbpath1.myfunc
+run
