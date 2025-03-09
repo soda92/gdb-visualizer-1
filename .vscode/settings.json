@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "CMake*.json": "jsonc",
+        ".gdbinit": "plaintext",
+        ".lldbinit": "plaintext",
+    }
+}

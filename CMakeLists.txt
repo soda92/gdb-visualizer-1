@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.22)
-project(cplapplet)
+project(gdbviz1)
 
-set(SOURCES main.c app.def app.rc)
-set(TARGET myapplet)
+set(SOURCES viz.cpp)
+set(TARGET gdbviz1)
 
-add_library(${TARGET} SHARED ${SOURCES})
+add_executable(${TARGET} ${SOURCES})
 
 SET_TARGET_PROPERTIES(${TARGET} PROPERTIES PREFIX "")
 set_target_properties(${TARGET} PROPERTIES

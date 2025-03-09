@@ -1,2 +1,6 @@
 __cmake*
 __pycache*
+
+/build
+/compile*.json
+/.cache

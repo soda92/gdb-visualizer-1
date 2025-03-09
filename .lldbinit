@@ -1,0 +1,3 @@
+command script import viz2.py
+breakpoint set --file viz.cpp --line 28
+type summary add --python-function viz2.function2 Rectangle

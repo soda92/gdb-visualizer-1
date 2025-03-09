@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Launch",
+            "program": "${workspaceFolder}/build/gdbviz1.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // "preLaunchTask": "build",
+            "initCommands": ["command source ${workspaceFolder}/.lldbinit"]
+            // "initCommands": [
+            //     "command script import viz2.py",
+            //     "type summary add --python-function viz2.function2 Rectangle"
+            // ]
+        }
+    ]
+}
