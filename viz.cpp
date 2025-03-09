@@ -29,6 +29,6 @@ int main() {
   a.member2 = 2;
 
   Rectangle r;
-  vector<string> vs = {"hello", "aaa"};
+  vector<string> vs = {"hello0", "aaa"};
   return 0;
 }
