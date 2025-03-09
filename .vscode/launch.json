@@ -8,11 +8,9 @@
             "args": [],
             "cwd": "${workspaceFolder}",
             // "preLaunchTask": "build",
-            "initCommands": ["command source ${workspaceFolder}/.lldbinit"]
-            // "initCommands": [
-            //     "command script import viz2.py",
-            //     "type summary add --python-function viz2.function2 Rectangle"
-            // ]
+            "initCommands": [
+                "command source ${workspaceFolder}/.lldbinit"
+            ]
         }
     ]
 }
