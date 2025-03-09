@@ -1,3 +1,7 @@
+#include <string>
+#include <vector>
+using namespace std;
+
 namespace MyNamespace {
 class MyClass {
 public:
@@ -25,5 +29,6 @@ int main() {
   a.member2 = 2;
 
   Rectangle r;
+  vector<string> vs = {"hello", "aaa"};
   return 0;
 }

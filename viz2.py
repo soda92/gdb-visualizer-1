@@ -6,3 +6,9 @@ def function2(valobj, internal_dict):
     area = height * width
     perimeter = 2 * (height + width)
     return "Area: " + str(area) + ", Perimeter: " + str(perimeter)
+
+
+def s1():
+    from pathlib import Path
+
+    Path("build/t1.txt").write_text("aaa", encoding="utf8")
