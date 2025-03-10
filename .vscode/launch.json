@@ -9,7 +9,7 @@
             "cwd": "${workspaceFolder}",
             // "preLaunchTask": "build",
             "initCommands": [
-                "command source ${workspaceFolder}/.lldbinit"
+                "command source ${workspaceFolder}/viz.lldb"
             ]
         },
         {
