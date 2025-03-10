@@ -12,12 +12,12 @@ set_target_properties(${TARGET} PROPERTIES
 )
 
 
-set(SOURCES2 deque.cpp)
-set(TARGET2 deque)
+set(SOURCES deque.cpp)
+set(TARGET deque)
 
-add_executable(${TARGET2} ${SOURCES2})
+add_executable(${TARGET} ${SOURCES})
 
-set(SOURCES3 mandelbrot.cpp)
-set(TARGET3 mandelbrot)
+set(SOURCES mandelbrot.cpp)
+set(TARGET mandelbrot)
 
-add_executable(${TARGET3} ${SOURCES3})
+add_executable(${TARGET} ${SOURCES})
