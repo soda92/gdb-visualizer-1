@@ -3,13 +3,25 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Launch",
+            "name": "gdbviz1",
             "program": "${workspaceFolder}/build/gdbviz1.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
             // "preLaunchTask": "build",
             "initCommands": [
                 "command source ${workspaceFolder}/.lldbinit"
+            ]
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "deque",
+            "program": "${workspaceFolder}/build/deque.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // "preLaunchTask": "build",
+            "initCommands": [
+                "command source ${workspaceFolder}/deque.clldb"
             ]
         }
     ]

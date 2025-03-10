@@ -1,0 +1,3 @@
+target create ".\\build\\deque.exe"
+breakpoint set --file deque.cpp --line 8
+run
