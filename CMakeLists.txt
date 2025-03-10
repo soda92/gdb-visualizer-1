@@ -31,3 +31,13 @@ set(SOURCES sync-thread.c)
 set(TARGET sync-thread)
 
 add_executable(${TARGET} ${SOURCES})
+
+set(SOURCES event.c)
+set(TARGET event)
+
+add_executable(${TARGET} ${SOURCES})
+
+set(SOURCES mutex.c)
+set(TARGET mutex)
+
+add_executable(${TARGET} ${SOURCES})
