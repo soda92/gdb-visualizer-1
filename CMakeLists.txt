@@ -16,3 +16,8 @@ set(SOURCES2 deque.cpp)
 set(TARGET2 deque)
 
 add_executable(${TARGET2} ${SOURCES2})
+
+set(SOURCES3 mandelbrot.cpp)
+set(TARGET3 mandelbrot)
+
+add_executable(${TARGET3} ${SOURCES3})

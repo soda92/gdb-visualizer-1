@@ -23,6 +23,15 @@
             "initCommands": [
                 "command source ${workspaceFolder}/deque.clldb"
             ]
+        },
+        {
+            "name": "Mandelbrot",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/mandelbrot",
+            "initCommands": [
+                "command script import ${workspaceRoot}/mandelbrot.py" // <<<<< This is the important bit
+            ]
         }
     ]
 }
