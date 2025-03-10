@@ -21,3 +21,13 @@ set(SOURCES mandelbrot.cpp)
 set(TARGET mandelbrot)
 
 add_executable(${TARGET} ${SOURCES})
+
+set(SOURCES windows-error.c)
+set(TARGET windows-error)
+
+add_executable(${TARGET} ${SOURCES})
+
+set(SOURCES sync-thread.c)
+set(TARGET sync-thread)
+
+add_executable(${TARGET} ${SOURCES})
