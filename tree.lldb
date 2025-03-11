@@ -1,0 +1,6 @@
+# run via: lldb -x -s tree.lldb
+process attach -n "dictionary.exe"
+breakpoint set -n find_word
+continue
+script import tree_utils
+#script tree_utils.lldb1()
