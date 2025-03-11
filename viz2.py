@@ -1,4 +1,6 @@
-def function2(valobj, internal_dict):
+from lldb_typeinfo import lldb
+
+def function2(valobj: lldb.SBValue, internal_dict):
     height_val = valobj.GetChildMemberWithName("height")
     width_val = valobj.GetChildMemberWithName("width")
     height = height_val.GetValueAsUnsigned(0)
