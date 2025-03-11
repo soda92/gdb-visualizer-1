@@ -1,6 +1,6 @@
 [project]
 name = "lldb-typeinfo"
-version = "2025.3.11.1"
+version = "2025.3.11.2"
 description = "Additional type information for lldb"
 readme = "README.md"
 requires-python = ">=3.10"

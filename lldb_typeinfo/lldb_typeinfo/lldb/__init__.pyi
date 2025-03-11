@@ -46,6 +46,12 @@ class SBValue(object):
     linked list.
     """
 
+    def GetValueAsUnsigned(self, fail_value=0) -> int:
+        r"""
+        GetValueAsUnsigned(SBValue self, SBError error, uint64_t fail_value=0) -> uint64_t
+        GetValueAsUnsigned(SBValue self, uint64_t fail_value=0) -> uint64_t
+        """
+
     def GetChildMemberWithName(self, name: str, use_dynamic=False) -> SBValue:
         r"""
         GetChildMemberWithName(SBValue self, char const * name) -> SBValue
