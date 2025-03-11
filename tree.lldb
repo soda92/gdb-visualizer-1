@@ -3,4 +3,11 @@ process attach -n "dictionary.exe"
 breakpoint set -n find_word
 continue
 script import tree_utils
-#script tree_utils.lldb1()
+script tree_utils.lldb1()
+
+breakpoint set -l 115
+breakpoint set -l 117
+
+script import tree_debug
+breakpoint command add 2 --python-function tree_debug.py1
+breakpoint command add 3 --python-function tree_debug.py2
