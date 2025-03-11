@@ -41,3 +41,8 @@ set(SOURCES mutex.c)
 set(TARGET mutex)
 
 add_executable(${TARGET} ${SOURCES})
+
+set(SOURCES dictionary.c)
+set(TARGET dictionary)
+
+add_executable(${TARGET} ${SOURCES})
