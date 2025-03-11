@@ -19,7 +19,7 @@ http://lldb.llvm.org/scripting.html
 """
 
 # import lldb
-from lldb_typeinfo.lldb_typeinfo import lldb
+from lldb_typeinfo import lldb
 
 
 def DFS(root: lldb.SBValue, word: str, cur_path: str) -> str:
