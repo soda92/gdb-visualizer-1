@@ -18,11 +18,19 @@ for more information about dictionary.c go to
 http://lldb.llvm.org/scripting.html
 """
 
-# import lldb
-from lldb_typeinfo import lldb
+
+try:
+    from lldb_typeinfo.lldb import SBValue
+except Exception as _e:
+    exec("""
+class SBValue:
+    pass
+        """)
+    pass
 
 
-def DFS(root: lldb.SBValue, word: str, cur_path: str) -> str:
+
+def DFS(root: SBValue, word: str, cur_path: str) -> str:
     """
     Recursively traverse a binary search tree containing
     words sorted alphabetically, searching for a particular
@@ -75,7 +83,7 @@ def DFS(root: lldb.SBValue, word: str, cur_path: str) -> str:
             return DFS(right_child_ptr, word, cur_path)
 
 
-def tree_size(root: lldb.SBValue) -> int:
+def tree_size(root: SBValue) -> int:
     """
     Recursively traverse a binary search tree, counting
     the nodes in the tree.  Returns the final count.
@@ -97,7 +105,7 @@ def tree_size(root: lldb.SBValue) -> int:
     return total_size
 
 
-def print_tree(root: lldb.SBValue):
+def print_tree(root: SBValue):
     """
     Recursively traverse a binary search tree, printing out
     the words at the nodes in alphabetical order (the
@@ -118,3 +126,12 @@ def print_tree(root: lldb.SBValue):
         int(root.GetChildAtIndex(2).GetValue(), 16) != 0
     ):
         print_tree(root.GetChildAtIndex(2))
+
+
+def lldb1():
+    import lldb
+
+    root = lldb.frame.FindVariable("dictionary")  # type: ignore # noqa: F821
+    current_path = ""
+    path = DFS(root, "Romeo", current_path)
+    print(path)
