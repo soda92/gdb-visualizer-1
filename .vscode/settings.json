@@ -3,5 +3,16 @@
         "CMake*.json": "jsonc",
         ".gdbinit": "plaintext",
         ".lldbinit": "plaintext",
+    },
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "auto",
+        "editor.formatOnType": true,
+        "editor.wordBasedSuggestions": "off",
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "off",
+            "strings": "off"
+        }
     }
 }
