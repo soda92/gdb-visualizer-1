@@ -42,7 +42,7 @@ set(TARGET mutex)
 
 add_executable(${TARGET} ${SOURCES})
 
-set(SOURCES dictionary.c)
+set(SOURCES tree_dictionary.c)
 set(TARGET dictionary)
 
 add_executable(${TARGET} ${SOURCES})
