@@ -2,8 +2,20 @@ path = "LRLRLLRR"
 
 # import lldb  # noqa: E402
 
+try:
+    from lldb_typeinfo.lldb_typeinfo.lldb import SBFrame
+except Exception as _e:
+    try:
+        from lldb_typeinfo.lldb import SBFrame
+    except Exception as _e:
+        exec("""
+class SBFrame:
+    pass
+            """)
+        pass
 
-def py1(frame, bp_loc, internal_dict):
+
+def py1(frame: SBFrame, bp_loc, internal_dict):
     global path
     if path[0] == "L":
         path = path[1:]
@@ -14,7 +26,7 @@ def py1(frame, bp_loc, internal_dict):
         print("Here is the problem. Going left, should go right!")
 
 
-def py2(frame, bp_loc, internal_dict):
+def py2(frame: SBFrame, bp_loc, internal_dict):
     global path
     if path[0] == "R":
         path = path[1:]
