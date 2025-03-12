@@ -3,16 +3,13 @@ path = "LRLRLLRR"
 # import lldb  # noqa: E402
 
 try:
-    from lldb_typeinfo.lldb_typeinfo.lldb import SBFrame
-except Exception as _e:
-    try:
-        from lldb_typeinfo.lldb import SBFrame
-    except Exception as _e:
-        exec("""
+    from lldb_typeinfo import SBFrame
+except ImportError as _e:
+    exec("""
 class SBFrame:
     pass
-            """)
-        pass
+        """)
+    pass
 
 
 def py1(frame: SBFrame, bp_loc, internal_dict):
