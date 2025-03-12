@@ -5,11 +5,7 @@ path = "LRLRLLRR"
 try:
     from lldb_typeinfo import SBFrame
 except ImportError as _e:
-    exec("""
-class SBFrame:
-    pass
-        """)
-    pass
+    exec("""a=1; SBFrame=object""")
 
 
 def py1(frame: SBFrame, bp_loc, internal_dict):
