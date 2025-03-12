@@ -1,2 +1,0 @@
-class SBError(object):
-    pass
